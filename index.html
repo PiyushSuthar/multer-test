@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multer Test!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container center">
+        <h1 class="center">Multer Test</h1>
+        <form action="/api/add" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="name" name="name" required class="form-control" placeholder="ex.Toolzar">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Developer Name</label>
+                <input type="name" name="developer" required class="form-control" placeholder="ex.Toolzar">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Logo</label>
+                <input type="file" required name="logo" class="form-control-file">
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Screenshots (upto 3)</label>
+                <input type="file" multiple accept="image/jpeg" required name="screenshots" class="form-control-file">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
